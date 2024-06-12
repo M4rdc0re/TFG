@@ -38,9 +38,9 @@ int main() {
 	DWORD scSize = SizeofResource(NULL, scResource);
 	HGLOBAL scResourceData = LoadResource(NULL, scResource);
 
-    HRSRC kResource = FindResource(NULL, MAKEINTRESOURCE(IDI_BIN2), "BIN2");
-    DWORD kSize = SizeofResource(NULL, kResource);
-    HGLOBAL kResourceData = LoadResource(NULL, kResource);
+    	HRSRC kResource = FindResource(NULL, MAKEINTRESOURCE(IDI_BIN2), "BIN2");
+   	DWORD kSize = SizeofResource(NULL, kResource);
+    	HGLOBAL kResourceData = LoadResource(NULL, kResource);
 
 	Desencriptar((char*)scResourceData, scSize, (char*)kResourceData, kSize);
 
