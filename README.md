@@ -12,5 +12,6 @@ wix convert plantilla.wxs
 wix build -o setup.msi setup.wxs
 ```
 ## Créditos
-<p>Gemini Security (https://github.com/gemini-security/How-to-bypass-Windows-Defender-with-Embedded-Resources-.rsrc-)</p>
-<p>Sabri (https://github.com/KINGSABRI/MSI-AlwaysInstallElevated/blob/master/WXS-Templates/alwaysInstallElevated-2.wxs)</p>
+[Gemini Security](https://github.com/gemini-security/How-to-bypass-Windows-Defender-with-Embedded-Resources-.rsrc-)
+
+[Sabri](https://github.com/KINGSABRI/MSI-AlwaysInstallElevated/blob/master/WXS-Templates/alwaysInstallElevated-2.wxs)
