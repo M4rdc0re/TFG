@@ -1,5 +1,5 @@
 # Recursos del trabajo de fin de grado
-Recursos utilizados para la realización del TFG de Marcos González Ruiz
+Recursos utilizados para la realización del trabajo de fin de grado <em><b>Un ejercicio de Red Team</b></em>.
 ## Comandos para compilar el malware de Havoc
 ```
 python3 aes.py demon.bin
